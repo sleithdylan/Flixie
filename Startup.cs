@@ -1,6 +1,7 @@
 using Flixie.Data;
 using Flixie.Models.Settings;
 using Flixie.Services;
+using Flixie.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,8 @@ namespace Flixie
             services.AddControllersWithViews();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddTransient<SeedService>();
+            services.AddHttpClient();
+            services.AddScoped<IRemoteMovieService, TMDBMovieService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
