@@ -7,6 +7,7 @@
         RATED_12,
         RATED_15,
         RATED_16,
-        RATED_18
+        RATED_18,
+        NOT_RATED
     }
 }
