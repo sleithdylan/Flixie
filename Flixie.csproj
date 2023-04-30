@@ -16,4 +16,6 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettingsexample_1json__JsonSchema="https://cdn.sdf.com/schemas/sdf-schema-1.0.json" /></VisualStudio></ProjectExtensions>
+
 </Project>
