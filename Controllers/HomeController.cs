@@ -40,7 +40,7 @@ namespace Flixie.Controllers
                 Upcoming = await _tmdbMovieService.SearchMoviesAsync(MovieCategory.upcoming, count),
             };
 
-            return View();
+            return View(data);
         }
 
         public IActionResult Privacy()
