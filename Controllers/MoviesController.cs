@@ -36,6 +36,41 @@ namespace Flixie.Controllers
             return View(movies);
         }
 
+        public async Task<IActionResult> Details(int? id, bool local = false)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Movie movie = new();
+
+            if (local)
+            {
+                // Get the movie data from the database
+                movie = await _context.Movie
+                    .Include(m => m.Cast)
+                    .Include(m => m.Crew)
+                    .FirstOrDefaultAsync(m => m.Id == id);
+            }
+            else
+            {
+                // Get the movie data from the TMDB API
+                var movieDetail = await _tmdbMovieService.MovieDetailAsync((int)id);
+                movie = await _tmdbMappingService.MapMovieDetailAsync(movieDetail);
+            }
+
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["Local"] = local;
+
+            return View(movie);
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Import(int id)
