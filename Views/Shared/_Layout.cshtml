@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/slider-radio.css">
-    <link rel="stylesheet" href="./css/select2.min.css">
-    <link rel="stylesheet" href="./css/magnific-popup.css">
-    <link rel="stylesheet" href="./css/plyr.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="~/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/slider-radio.css">
+    <link rel="stylesheet" href="~/css/select2.min.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/plyr.css">
+    <link rel="stylesheet" href="~/css/main.css">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
@@ -20,9 +20,8 @@
 
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
+    <meta name="author" content="Dylan Sleith">
     <title>@ViewData["Title"]</title>
-
 </head>
 <body>
     <header class="header header--hidden">
@@ -38,7 +37,7 @@
 
                         <div class="d-flex">
                             <a href="/" class="header__logo">
-                                <img src="img/logo.svg" alt="Movies & TV Shows, Online cinema HTML Template">
+                                <img src="~/img/logo.svg" alt="Flixie logo">
                             </a>
                             <ul class="header__nav">
                                 <li class="header__nav-item">
@@ -46,7 +45,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="header__actions">
+                        @*<div class="header__actions">
                             <form action="#" class="header__form">
                                 <input class="header__form-input" type="text" placeholder="I'm looking for...">
                                 <button class="header__form-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" /></svg></button>
@@ -57,11 +56,11 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z" /></svg>
                             </button>
 
-                            @*   <a href="signin.html" class="header__user">
+                               <a href="signin.html" class="header__user">
                             <span>Sign in</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,12a1,1,0,0,0-1-1H11.41l2.3-2.29a1,1,0,1,0-1.42-1.42l-4,4a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l4,4a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L11.41,13H19A1,1,0,0,0,20,12ZM17,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V16a1,1,0,0,0-2,0v3a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V5A3,3,0,0,0,17,2Z" /></svg>
-                            </a>*@
-                        </div>
+                            </a>
+                        </div>*@
                     </div>
                 </div>
             </div>
@@ -83,15 +82,15 @@
             </div>
         </div>
     </footer>
-    <script src="./js/jquery-3.5.1.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/slider-radio.js"></script>
-    <script src="./js/select2.min.js"></script>
-    <script src="./js/smooth-scrollbar.js"></script>
-    <script src="./js/jquery.magnific-popup.min.js"></script>
-    <script src="./js/plyr.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="~/js/jquery-3.5.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/slider-radio.js"></script>
+    <script src="~/js/select2.min.js"></script>
+    <script src="~/js/smooth-scrollbar.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/plyr.min.js"></script>
+    <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

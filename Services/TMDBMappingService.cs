@@ -160,8 +160,8 @@ namespace Flixie.Services
 
         private MovieRating GetRating(Release_Dates dates)
         {
-            var movieRating = MovieRating.NOT_RATED;
-            var certification = dates.results.FirstOrDefault(r => r.iso_3166_1 == "IE");
+            var movieRating = MovieRating.NR;
+            var certification = dates.results.FirstOrDefault(r => r.iso_3166_1 == "US");
 
             if (certification != null)
             {

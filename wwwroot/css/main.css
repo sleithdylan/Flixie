@@ -625,7 +625,7 @@ body::-webkit-scrollbar-thumb {
   }
   .header__actions {
 	justify-content: space-between;
-	/*width: 350px;*/
+	width: 350px;
   }
   .header__form {
 	position: relative;
@@ -651,12 +651,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media (min-width: 1440px) {
-/*  .header__actions {
+  .header__actions {
 	width: 383px;
   }
   .header__content {
 	padding: 0 30px;
-  }*/
+  }
 }
 /*==============================
 	Home
