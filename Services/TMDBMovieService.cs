@@ -4,6 +4,7 @@ using Flixie.Models.TMDB;
 using Flixie.Services.Interfaces;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace Flixie.Services
             var query = $"{_appSettings.TMDBSettings.BaseUrl}/person/{id}";
             var queryParams = new Dictionary<string, string>()
             {
-                { "api_key", _appSettings.FlixieSettings.TmDbApiKey },
+                { "api_key", Environment.GetEnvironmentVariable("TMDB_API_KEY") ?? _appSettings.FlixieSettings.TmDbApiKey },
                 { "language", _appSettings.TMDBSettings.QueryOptions.Language }
             };
             var requestUri = QueryHelpers.AddQueryString(query, queryParams);
@@ -64,7 +65,7 @@ namespace Flixie.Services
             var query = $"{_appSettings.TMDBSettings.BaseUrl}/movie/{id}";
             var queryParams = new Dictionary<string, string>()
             {
-                { "api_key", _appSettings.FlixieSettings.TmDbApiKey },
+                { "api_key", Environment.GetEnvironmentVariable("TMDB_API_KEY") ?? _appSettings.FlixieSettings.TmDbApiKey },
                 { "language", _appSettings.TMDBSettings.QueryOptions.Language },
                 { "append_to_response", _appSettings.TMDBSettings.QueryOptions.AppendToResponse }
             };
@@ -97,7 +98,7 @@ namespace Flixie.Services
 
             var queryParams = new Dictionary<string, string>()
             {
-                { "api_key", _appSettings.FlixieSettings.TmDbApiKey },
+                { "api_key", Environment.GetEnvironmentVariable("TMDB_API_KEY") ?? _appSettings.FlixieSettings.TmDbApiKey },
                 { "language", _appSettings.TMDBSettings.QueryOptions.Language },
                 { "page", _appSettings.TMDBSettings.QueryOptions.Page }
             };
